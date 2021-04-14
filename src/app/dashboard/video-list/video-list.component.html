@@ -1,0 +1,7 @@
+<!-- "?" here means "return undefined if it's undefined or null" -->
+<app-video-item
+  *ngFor="let v of videos"
+  (click)="selectVideo(v)"
+  [class.highlight]="selectedVideo?.id === v.id"
+  [video]="v"
+></app-video-item>
