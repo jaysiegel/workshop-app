@@ -1,1 +1,49 @@
-<p>stat-filters works!</p>
+<form [formGroup]="group">
+    <p>Region</p>
+    <label>
+      <input formControlName="region" type="radio" name="region" value="na">
+      <span>North America</span>
+    </label>
+    <label>
+      <input formControlName="region" type="radio" name="region" value="eur">
+      <span>Europe</span>
+    </label>
+    <label>
+      <input formControlName="region" type="radio" name="region" value="asia">
+      <span>Asia</span>
+    </label>
+    <label>
+      <input formControlName="region" type="radio" name="region" value="all">
+      <span>All</span>
+    </label>
+  
+    <p>Date Range</p>
+    <label>
+      From
+      <input type="date" formControlName="fromDate">
+    </label>
+    <label>
+      To
+      <input type="date" formControlName="toDate">
+    </label>
+  
+    <p>Age Groups</p>
+    <label>
+      <input formControlName="under18" type="checkbox">
+      <span>Under 18</span>
+    </label>
+    <label>
+      <input formControlName="18to40" type="checkbox">
+      <span>18 - 40</span>
+    </label>
+    <label>
+      <input formControlName="40to60" type="checkbox">
+      <span>40 - 60</span>
+    </label>
+    <label>
+      <input formControlName="over60" type="checkbox">
+      <span>Over 60</span>
+    </label>
+  </form>
+  
+  <pre>{{ group.value | json }}</pre>
